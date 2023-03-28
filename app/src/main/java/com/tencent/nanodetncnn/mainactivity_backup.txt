@@ -1,0 +1,312 @@
+// Tencent is pleased to support the open source community by making ncnn available.
+//
+// Copyright (C) 2021 THL A29 Limited, a Tencent company. All rights reserved.
+//
+// Licensed under the BSD 3-Clause License (the "License"); you may not use this file except
+// in compliance with the License. You may obtain a copy of the License at
+//
+// https://opensource.org/licenses/BSD-3-Clause
+//
+// Unless required by applicable law or agreed to in writing, software distributed
+// under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+// CONDITIONS OF ANY KIND, either express or implied. See the License for the
+// specific language governing permissions and limitations under the License.
+
+package com.tencent.nanodetncnn;
+
+import android.Manifest;
+import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.PixelFormat;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
+import android.view.Surface;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
+import com.github.mikephil.charting.utils.ViewPortHandler;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class MainActivity extends Activity implements SurfaceHolder.Callback
+{
+    public static final int REQUEST_CAMERA = 100;
+
+    private NcnnRetinaface ncnnretinaface = new NcnnRetinaface();
+    private int facing = 1;
+
+    private Spinner spinnerModel;
+    private Spinner spinnerCPUGPU;
+    private int current_model = 0;
+    private int current_cpugpu = 0;
+
+    private SurfaceView cameraView;
+
+    private String TAG = "Camera";
+    private PieChart pieChart;
+    private BarChart barChart;
+    Handler handler = null;
+
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        cameraView = (SurfaceView) findViewById(R.id.cameraview);
+
+        cameraView.getHolder().setFormat(PixelFormat.RGBA_8888);
+        cameraView.getHolder().addCallback(this);
+
+        LinearLayout layout = (LinearLayout) findViewById(R.id.datashow);
+
+
+        pieChart = findViewById(R.id.pieChart);
+        barChart = findViewById(R.id.barChart);
+        initPieChart();
+        initBarChart();
+        reload();
+        handler = new Handler();
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+
+                int[] class_num = ncnnretinaface.getResult();
+                List<BarEntry> entries = new ArrayList<>(); //定义一个数据容器
+                for (int i = 0; i < 7; ++i) {
+                    entries.add(new BarEntry(i,class_num[i]));
+//                    pieEntries.add(new PieEntry(i,class_num[i]));
+                }
+                //Bar
+                BarDataSet barDataSet = new BarDataSet(entries, "测试数据");
+                ArrayList<IBarDataSet> barsets = new ArrayList<IBarDataSet>();
+                barsets.add(barDataSet);
+                BarData barData = new BarData(barsets);
+                barChart.setData(barData);
+                XAxis xAxis = barChart.getXAxis();
+                XaxisFormat xAxisFormatter = new XaxisFormat(barChart);
+                xAxis.setValueFormatter(xAxisFormatter);
+                barChart.invalidate();
+
+//                PieDataSet pieDataSet = new PieDataSet(pieEntries,"饼图");
+//                XAxis xAxis = barChart.getXAxis(); // 获取柱状图的x轴
+//                XAxisValueFormatter labelformateer = new XAxisValueFormatter(emotion_dict);
+//                xAxis.setValueFormatter(labelformateer);
+//                PieData pieData = new PieData(pieDataSet);
+//                setPieData(pieDataSet);
+
+
+                //Pie
+                handler.postDelayed(this,200);
+            }
+        };
+        handler.postDelayed(runnable,2000);
+    }
+    String[] emotion_dict = {"angry", "disgust","fear", "happy",
+            "sad", "surprise", "neutral"};
+
+
+    private void initPieChart() {
+        pieChart.getDescription().setEnabled(false); // 不显示描述
+        pieChart.setDrawHoleEnabled(false); // 不显示饼图中间的空洞
+        pieChart.setRotationEnabled(false); // 不允许饼图旋转
+        pieChart.setDrawEntryLabels(false); // 不在饼图中显示标签
+        pieChart.setExtraOffsets(20, 20, 20, 20); // 设置饼图的偏移量，类似于内边距 ，设置视图窗口大小
+        setPieLegend(); // 设置图例
+    }
+
+    private void setPieData(PieDataSet pieDataSet) {
+        // 设置饼图各部分的颜色
+        pieDataSet.setColors(Color.parseColor("#F7F709"), Color.parseColor("#1AE61A"));
+        // 设置饼图中数据显示的格式
+        pieDataSet.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                // 此处的value就是PieEntry（）中第一个参数的value
+                return emotion_dict[dataSetIndex] + value + "%";
+//                if (value < 40) {
+//                    return "水果：" + value + "%";
+//                } else {
+//                    return "蔬菜：" + value + "%";
+//                }
+            }
+        });
+        pieDataSet.setValueTextSize(20f);
+        pieDataSet.setSliceSpace(8f); // 设置扇区中的间隔
+        // 设置饼图显示的线
+        pieDataSet.setValueLineColor(Color.BLACK);
+        pieDataSet.setValueLinePart1OffsetPercentage(80); // 第一条线离圆心的百分比
+        pieDataSet.setValueLinePart1Length(0.5f); // 第一条线长度
+        pieDataSet.setValueLinePart2Length(0.7f); // 第二条线长度
+        pieDataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE); // 设置值显示的位置
+        PieData pieData = new PieData(pieDataSet);
+        pieChart.setData(pieData); // 为饼图设置数据
+        pieChart.invalidate();
+    }
+
+    private void setPieLegend() {
+        Legend legend = pieChart.getLegend();
+        legend.setFormSize(20f); // 图例的图形大小
+        legend.setTextSize(10f); // 图例的文字大小
+        legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER); // 显示的位置水平居中
+        legend.setDrawInside(true); // 设置图例在图中
+        legend.setYOffset(5); // 设置图例在垂直方向的偏移量
+    }
+
+
+
+
+
+    public BarChart initBarChart() {
+        barChart.setDrawBarShadow(false); // 设置每条柱子的阴影不显示
+        barChart.setDrawValueAboveBar(true); // 设置每条柱子的数值显示
+        YAxis yAxisLeft = barChart.getAxisLeft(); // 获取柱状图左侧的y轴
+        YAxis yAxisRight = barChart.getAxisRight(); // 获取柱状图右侧的y轴
+
+        XAxis xAxis = barChart.getXAxis();
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setDrawGridLines(false);
+        setAxis(xAxis, yAxisLeft, yAxisRight); //调用方法设置柱状图的轴线
+
+
+        return barChart;
+    }
+
+    public void setAxis(XAxis xAxis, YAxis leftAxis, YAxis rightAxis) {
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM); // 这里设置x轴在柱状图底部显示
+        xAxis.setAxisLineWidth(1); //设置x轴宽度
+        xAxis.setAxisMinimum(0); //设置x轴从0开始绘画
+        xAxis.setDrawAxisLine(true); //设置x轴的轴线显示
+        xAxis.setDrawGridLines(false);//设置x轴的表格线不显示
+        xAxis.setEnabled(true); // 设置x轴显示
+        XaxisFormat xAxisFormatter = new XaxisFormat(barChart);
+        xAxis.setValueFormatter(xAxisFormatter);
+
+
+        leftAxis.setAxisMinimum(0); //设置y轴从0刻度开始
+        leftAxis.setDrawGridLines(false); // 这里设置左侧y轴不显示表格线
+        leftAxis.setDrawAxisLine(true); // 这里设置左侧y轴显示轴线
+        leftAxis.setAxisLineWidth(1); //设置y轴宽度
+        leftAxis.setEnabled(true); //设置左侧的y轴显示
+
+        rightAxis.setAxisMinimum(0); //设置y轴从0刻度开始
+        rightAxis.setDrawGridLines(false);// 这里设置右侧y轴不显示表格线
+        rightAxis.setDrawAxisLine(true); // 这里设置右侧y轴显示轴线
+        rightAxis.setAxisLineWidth(1); //设置右侧y轴宽度
+        rightAxis.setEnabled(true); //设置右侧的y轴显示
+
+    }
+
+    private void reload()
+    {
+        boolean ret_init = ncnnretinaface.loadModel(getAssets(), current_model, current_cpugpu);
+        if (!ret_init)
+        {
+            Log.e("MainActivity", "ncnnyolv5 loadModel failed");
+        }
+    }
+
+    @Override
+    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height)
+    {
+        ncnnretinaface.setOutputWindow(holder.getSurface());
+
+    }
+
+    @Override
+    public void surfaceCreated(SurfaceHolder holder)
+    {
+    }
+
+    @Override
+    public void surfaceDestroyed(SurfaceHolder holder)
+    {
+    }
+
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+
+        if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED)
+        {
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, REQUEST_CAMERA);
+        }
+
+        ncnnretinaface.openCamera(facing);
+    }
+
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+
+        ncnnretinaface.closeCamera();
+    }
+
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        LinearLayout layout = (LinearLayout) findViewById(R.id.datashow);
+
+        if (newConfig.orientation == this.getResources().getConfiguration().ORIENTATION_PORTRAIT) {
+            layout.setRotation(-90);             // 顺时针旋转90度
+        } else if (newConfig.orientation == this.getResources().getConfiguration().ORIENTATION_LANDSCAPE) {
+            layout.setRotation(90);             // 顺时针旋转90度
+        }
+    }
+
+}
+
+class XAxisValueFormatter extends ValueFormatter implements IAxisValueFormatter {
+
+    private final String[] mLabels;
+    public XAxisValueFormatter(String[] labels) {
+        mLabels = labels;
+    }
+    @Override
+    public String getFormattedValue(float value, AxisBase axis) {
+        try {
+            return mLabels[(int) value];
+        } catch (Exception e) {
+            e.printStackTrace();
+            return mLabels[0];
+        }
+    }
+}

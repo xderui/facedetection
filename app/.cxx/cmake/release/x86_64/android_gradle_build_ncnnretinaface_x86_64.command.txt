@@ -1,0 +1,7 @@
+Executable : F:\environment\android-sdk_r24.4.1\android-sdk-windows\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+E:\Projects\FaceDetection_Class_PPLCNET\ncnn-Android-Yolov5-main-timely\app\.cxx\cmake\release\x86_64
+ncnnretinaface
+jvmArgs : 
+

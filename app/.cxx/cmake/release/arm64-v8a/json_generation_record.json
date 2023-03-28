@@ -1,0 +1,42 @@
+[
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 28 min SDK version: arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "rebuilding JSON E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\arm64-v8a\\android_gradle_build.json due to:"
+  },
+  {
+    "level": "INFO",
+    "message": "- a dependent build file changed"
+  },
+  {
+    "level": "INFO",
+    "message": "  - E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\CMakeLists.txt"
+  },
+  {
+    "level": "INFO",
+    "message": "keeping json folder \u0027E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\arm64-v8a\u0027 but regenerating project"
+  },
+  {
+    "level": "INFO",
+    "message": "executing cmake Executable : F:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\cmake\\3.10.2.4988404\\bin\\cmake.exe\narguments : \n-HE:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\n-BE:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\arm64-v8a\n-DANDROID_ABI\u003darm64-v8a\n-DANDROID_PLATFORM\u003dandroid-28\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dE:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a\n-DCMAKE_BUILD_TYPE\u003dRelease\n-DANDROID_NDK\u003dF:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\ndk-bundle\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a\n-DCMAKE_SYSTEM_VERSION\u003d28\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_ANDROID_NDK\u003dF:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\ndk-bundle\n-DCMAKE_TOOLCHAIN_FILE\u003dF:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\ndk-bundle\\build\\cmake\\android.toolchain.cmake\n-G Ninja\n-DCMAKE_MAKE_PROGRAM\u003dF:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\cmake\\3.10.2.4988404\\bin\\ninja.exe\njvmArgs : \n\n"
+  },
+  {
+    "level": "INFO",
+    "message": "done executing cmake"
+  },
+  {
+    "level": "INFO",
+    "message": "write build output E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\arm64-v8a\\build_output.txt"
+  },
+  {
+    "level": "INFO",
+    "message": "write command file E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\arm64-v8a\\build_command.txt"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed without problems"
+  }
+]

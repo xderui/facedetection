@@ -1,0 +1,21 @@
+# ninja log v5
+28	1544	672676201	CMakeFiles/ncnnretinaface.dir/ndkcamera.cpp.o	eca9ca8a38bdc3ce
+26	1552	672676201	CMakeFiles/ncnnretinaface.dir/retinafacencnn.cpp.o	93e6e09ba762b1fa
+21	1896	672676202	CMakeFiles/ncnnretinaface.dir/retinaface.cpp.o	7f0e5050b45071e5
+1897	4910	672676205	E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/build/intermediates/cmake/release/obj/x86/libncnnretinaface.so	4d0917206775d38f
+8	1012	672728348	CMakeFiles/ncnnretinaface.dir/ndkcamera.cpp.o	8c78409b32996c44
+3	1043	672728348	CMakeFiles/ncnnretinaface.dir/retinafacencnn.cpp.o	1867dd87bb17ee7c
+6	1454	672728348	CMakeFiles/ncnnretinaface.dir/retinaface.cpp.o	c08eec050673e4ae
+1454	4043	672728351	E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/build/intermediates/cmake/release/obj/x86/libncnnretinaface.so	e42c24a62a2e2bc3
+3	1411	672728858	CMakeFiles/ncnnretinaface.dir/retinaface.cpp.o	c08eec050673e4ae
+1411	6410	672728863	E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/build/intermediates/cmake/release/obj/x86/libncnnretinaface.so	e42c24a62a2e2bc3
+3	1377	672729724	CMakeFiles/ncnnretinaface.dir/retinaface.cpp.o	c08eec050673e4ae
+1378	3748	672729727	E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/build/intermediates/cmake/release/obj/x86/libncnnretinaface.so	e42c24a62a2e2bc3
+3	1395	672732018	CMakeFiles/ncnnretinaface.dir/retinaface.cpp.o	c08eec050673e4ae
+1395	2648	672732019	E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/build/intermediates/cmake/release/obj/x86/libncnnretinaface.so	e42c24a62a2e2bc3
+2	1720	672733265	CMakeFiles/ncnnretinaface.dir/retinaface.cpp.o	c08eec050673e4ae
+1720	7572	672733270	E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/build/intermediates/cmake/release/obj/x86/libncnnretinaface.so	e42c24a62a2e2bc3
+2	1369	672734605	CMakeFiles/ncnnretinaface.dir/retinaface.cpp.o	c08eec050673e4ae
+1369	2602	672734606	E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/build/intermediates/cmake/release/obj/x86/libncnnretinaface.so	e42c24a62a2e2bc3
+177	2017	672833427	CMakeFiles/ncnnretinaface.dir/retinaface.cpp.o	c08eec050673e4ae
+2017	4282	672833429	E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/build/intermediates/cmake/release/obj/x86/libncnnretinaface.so	e42c24a62a2e2bc3

@@ -1,0 +1,2 @@
+ninja: Entering directory `E:\Projects\FaceDetection_Class_PPLCNET\ncnn-Android-Yolov5-main-timely\app\.cxx\cmake\release\armeabi-v7a'
+ninja: no work to do.

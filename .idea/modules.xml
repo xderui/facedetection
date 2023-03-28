@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ncnn-Android-Yolov5-main-timely.iml" filepath="$PROJECT_DIR$/.idea/modules/ncnn-Android-Yolov5-main-timely.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MPChartExample/ncnn-Android-Yolov5-main-timely.MPChartExample.iml" filepath="$PROJECT_DIR$/.idea/modules/MPChartExample/ncnn-Android-Yolov5-main-timely.MPChartExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MPChartLib/ncnn-Android-Yolov5-main-timely.MPChartLib.iml" filepath="$PROJECT_DIR$/.idea/modules/MPChartLib/ncnn-Android-Yolov5-main-timely.MPChartLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ncnn-Android-Yolov5-main-timely.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ncnn-Android-Yolov5-main-timely.app.iml" />
+    </modules>
+  </component>
+</project>

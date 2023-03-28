@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/cameraview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp" />
+
+    <RelativeLayout
+        android:id="@+id/datatable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/cameraview"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="#80FFFFFF"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+<!--        <com.github.mikephil.charting.charts.LineChart-->
+<!--            android:id="@+id/linechart"-->
+<!--            android:layout_width="500dp"-->
+<!--            android:layout_height="170dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="-120dp"-->
+<!--            android:rotation="90" />-->
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/barChart"
+            android:layout_width="240dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:rotation="90" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/piechart"
+            android:layout_width="170dp"
+            android:layout_height="240dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:rotation="90" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/cameraview"
+        android:layout_marginTop="-100dp">
+
+        <Button
+            android:id="@+id/timedatashow"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:rotation="90"
+            android:text="数据\n预览" />
+
+        <Button
+            android:id="@+id/transcamera"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="150dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:rotation="90"
+            android:text="数据\n预览" />
+
+        <Button
+            android:id="@+id/historydatashow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="260dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:rotation="90"
+            android:text="数据\n预览" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

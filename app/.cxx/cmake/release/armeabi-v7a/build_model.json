@@ -1,0 +1,70 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely",
+      "sdkFolder": "F:\\environment\\android-sdk_r24.4.1\\android-sdk-windows",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\build\\intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app",
+      "makeFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\.cxx",
+      "cxxFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx",
+      "ndkFolder": "F:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\ndk-bundle",
+      "ndkVersion": "22.1.7171670",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [],
+    "variantName": "release",
+    "soFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\build\\intermediates\\cmake\\release\\lib",
+    "objFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\build\\intermediates\\cmake\\release\\obj",
+    "jsonFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release",
+    "gradleBuildOutputFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cxx\\release",
+    "isDebuggableEnabled": false,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "ARMEABI_V7A",
+  "abiPlatformVersion": 28,
+  "cxxBuildFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\armeabi-v7a",
+  "jsonFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\armeabi-v7a\\android_gradle_build.json",
+  "gradleBuildOutputFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cxx\\release\\armeabi-v7a",
+  "objFolder": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a",
+  "buildCommandFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\armeabi-v7a\\build_command.txt",
+  "buildOutputFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\armeabi-v7a\\build_output.txt",
+  "modelOutputFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\armeabi-v7a\\build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cxx\\release\\armeabi-v7a\\CMakeLists.txt",
+    "toolchainWrapperFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cxx\\release\\armeabi-v7a\\android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cxx\\release\\armeabi-v7a\\build_generation_state.json",
+    "cacheKeyFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cxx\\release\\armeabi-v7a\\compiler_cache_key.json",
+    "compilerCacheUseFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cxx\\release\\armeabi-v7a\\compiler_cache_use.json",
+    "compilerCacheWriteFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cxx\\release\\armeabi-v7a\\compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cxx\\release\\armeabi-v7a\\compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\armeabi-v7a\\json_generation_record.json",
+  "compileCommandsJsonFile": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\release\\armeabi-v7a\\compile_commands.json"
+}

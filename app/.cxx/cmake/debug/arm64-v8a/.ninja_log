@@ -1,0 +1,9 @@
+# ninja log v5
+5553	12437	671716564	E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/build/intermediates/cmake/debug/obj/arm64-v8a/libncnnyolov5.so	93c63c8e2ac6baee
+8	1168	671572959	CMakeFiles/ncnnyolov5.dir/ndkcamera.cpp.o	12ae567827e81e94
+8	1684	672725996	CMakeFiles/ncnnretinaface.dir/ndkcamera.cpp.o	743107303ec7d2de
+3	1265	671572959	CMakeFiles/ncnnyolov5.dir/yolov5ncnn.cpp.o	b4f5be922b561c78
+89	5553	671716558	CMakeFiles/ncnnyolov5.dir/yolov5.cpp.o	6cdebbffd14f23e5
+1266	3326	672750939	E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/build/intermediates/cmake/debug/obj/arm64-v8a/libncnnretinaface.so	f4ff5445b84a1bf6
+3	1266	672750937	CMakeFiles/ncnnretinaface.dir/retinaface.cpp.o	87bc6891c22d661a
+3	1511	672725996	CMakeFiles/ncnnretinaface.dir/retinafacencnn.cpp.o	129da4c46a04ed44

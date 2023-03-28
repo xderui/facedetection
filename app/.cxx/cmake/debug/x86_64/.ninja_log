@@ -1,0 +1,7 @@
+# ninja log v5
+0	9	0	clean	40b1e5246986367c
+1	7	0	clean	40b1e5246986367c
+23	1175	671572966	CMakeFiles/ncnnyolov5.dir/ndkcamera.cpp.o	d19ffce466f6ccb5
+28	1260	671572966	CMakeFiles/ncnnyolov5.dir/yolov5ncnn.cpp.o	cadfe55de39ca50a
+26	1312	671572966	CMakeFiles/ncnnyolov5.dir/yolov5.cpp.o	52974ae226d031cd
+1312	3677	671572968	E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/build/intermediates/cmake/debug/obj/x86_64/libncnnyolov5.so	dadeb5e2c13b26be

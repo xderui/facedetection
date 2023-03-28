@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/src/main/res/layout/activity_datacenter.xml" value="0.36614583333333334" />
+        <entry key="..\:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/src/main/res/layout/layout.xml" value="0.19947916666666668" />
+        <entry key="..\:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/src/main/res/layout/list_item_barchart.xml" value="0.36614583333333334" />
+        <entry key="..\:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/src/main/res/layout/list_item_linechart.xml" value="0.36614583333333334" />
+        <entry key="..\:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/src/main/res/layout/list_item_piechart.xml" value="0.36614583333333334" />
+        <entry key="..\:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/src/main/res/layout/main.xml" value="0.29438405797101447" />
+        <entry key="..\:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/src/main/res/layout/main2.xml" value="0.3269689737470167" />
+        <entry key="..\:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/src/main/res/layout/main3.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

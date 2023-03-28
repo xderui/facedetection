@@ -1,0 +1,16 @@
+ninja: Entering directory `E:\Projects\FaceDetection_Class_PPLCNET\ncnn-Android-Yolov5-main-timely\app\.cxx\cmake\debug\x86'
+[1/4] Building CXX object CMakeFiles/ncnnyolov5.dir/ndkcamera.cpp.o
+E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/src/main/jni/ndkcamera.cpp:152:117: warning: format specifies type 'long' but the argument has type 'int64_t' (aka 'long long') [-Wformat]
+    __android_log_print(ANDROID_LOG_WARN, "NdkCamera", "onCaptureSequenceCompleted %p %d %ld", session, sequenceId, frameNumber);
+                                                                                         ~~~                        ^~~~~~~~~~~
+                                                                                         %lld
+E:/Projects/FaceDetection_Class_PPLCNET/ncnn-Android-Yolov5-main-timely/app/src/main/jni/ndkcamera.cpp:434:22: warning: 'ASensorManager_getInstance' is deprecated [-Wdeprecated-declarations]
+    sensor_manager = ASensorManager_getInstance();
+                     ^
+F:/environment/android-sdk_r24.4.1/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\android/sensor.h:557:17: note: 'ASensorManager_getInstance' has been explicitly marked deprecated here
+__attribute__ ((deprecated)) ASensorManager* ASensorManager_getInstance();
+                ^
+2 warnings generated.
+[2/4] Building CXX object CMakeFiles/ncnnyolov5.dir/yolov5ncnn.cpp.o
+[3/4] Building CXX object CMakeFiles/ncnnyolov5.dir/yolov5.cpp.o
+[4/4] Linking CXX shared library E:\Projects\FaceDetection_Class_PPLCNET\ncnn-Android-Yolov5-main-timely\app\build\intermediates\cmake\debug\obj\x86\libncnnyolov5.so

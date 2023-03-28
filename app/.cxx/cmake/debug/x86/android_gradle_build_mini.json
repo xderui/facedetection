@@ -1,0 +1,36 @@
+{
+  "buildFiles": [
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\x86\\lib\\cmake\\glslangTargets.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\x86\\lib\\cmake\\OGLCompilerTargets-release.cmake",
+    "F:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\opencv-mobile-4.5.1-android\\sdk\\native\\jni\\OpenCVConfig.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\x86\\lib\\cmake\\OSDependentTargets.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\x86\\lib\\cmake\\ncnn\\ncnn.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\x86\\lib\\cmake\\SPIRVTargets-release.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\opencv-mobile-4.5.1-android\\sdk\\native\\jni\\OpenCVConfig-version.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\opencv-mobile-4.5.1-android\\sdk\\native\\jni\\abi-x86\\OpenCVConfig.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\x86\\lib\\cmake\\glslangTargets-release.cmake",
+    "F:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\ndk-bundle\\build\\cmake\\platforms.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\x86\\lib\\cmake\\ncnn\\ncnn-release.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\CMakeLists.txt",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\opencv-mobile-4.5.1-android\\sdk\\native\\jni\\abi-x86\\OpenCVModules-release.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\x86\\lib\\cmake\\OGLCompilerTargets.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\x86\\lib\\cmake\\OSDependentTargets-release.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\opencv-mobile-4.5.1-android\\sdk\\native\\jni\\abi-x86\\OpenCVModules.cmake",
+    "F:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\ndk-bundle\\build\\cmake\\compiler_id.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\x86\\lib\\cmake\\ncnn\\ncnnConfig.cmake",
+    "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\x86\\lib\\cmake\\SPIRVTargets.cmake"
+  ],
+  "cleanCommands": [
+    "F:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\debug\\x86\" clean"
+  ],
+  "buildTargetsCommand": "F:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\debug\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "ncnnretinaface-Debug-x86": {
+      "artifactName": "ncnnretinaface",
+      "buildCommand": "F:\\environment\\android-sdk_r24.4.1\\android-sdk-windows\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\.cxx\\cmake\\debug\\x86\" ncnnretinaface",
+      "abi": "x86",
+      "output": "E:\\Projects\\FaceDetection_Class_PPLCNET\\ncnn-Android-Yolov5-main-timely\\app\\build\\intermediates\\cmake\\debug\\obj\\x86\\libncnnretinaface.so"
+    }
+  }
+}
